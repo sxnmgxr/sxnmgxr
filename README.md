@@ -7,36 +7,31 @@
 ██████╔╝╚█████╔╝██████╔╝██║░░░██║░░░╚█████╔╝╚█████╔╝██║░░░░░
 ╚═════╝░░╚════╝░╚═════╝░╚═╝░░░╚═╝░░░░╚════╝░░╚════╝░╚═╝░░░░░
 
+USER@Retro-PC:~$
 
-### 3. Retro Icons and Badges
-Use retro-styled icons and badges to highlight your skills and tools.
+USER@Retro-PC:~$ help
 
-- **Tools**: Shields.io for custom badges.
-- **Example Badges**:
-  - ![Retro Badge](https://img.shields.io/badge/Retro-Computing-blue?style=for-the-badge&logo=retroarch&logoColor=white)
-  - ![Pixel Art](https://img.shields.io/badge/Pixel-Art-yellow?style=for-the-badge&logo=pixlr&logoColor=white)
+USER@Retro-PC:~$ about
 
-### 4. GitHub Contributions Graph
-Customize your contributions graph to match a retro theme. GitHub has an option to customize the color palette.
+USER@Retro-PC:~$ skills
 
-- **Tools**: GitHub’s profile settings.
-- **Idea**: Use a green and black color scheme reminiscent of old CRT monitors.
+USER@Retro-PC:~$ projects
 
-### 5. Terminal-Style Font
-Use a terminal-style font in your README.md for added authenticity.
+USER@Retro-PC:~$ contact
 
-- **Font Example**: 
-  - ![Monoid](https://fonts.google.com/specimen/Monoid)
-  - ![Fira Code](https://github.com/tonsky/FiraCode)
+USER@Retro-PC:~$ exit
 
-### 6. Custom Profile Sections
-Add sections to your README that mimic old software or operating systems.
 
-- **Example Sections**: 
-  - **System Info**: Similar to system properties in older OS.
-  - **Command Line**: Instructions formatted as if they were terminal commands.
+### Step 3: Customize and Style
 
-#### Example System Info Section
+1. **ASCII Art**: Use an ASCII art generator to create custom designs that fit the retro terminal theme.
+2. **Markdown Styling**: Ensure the code blocks and inline code are properly formatted using triple backticks (```) and single backticks (`) respectively.
 
+### Step 4: Add Retro Icons and Badges
+
+1. **Shields.io**: Use Shields.io to create and add retro-themed badges to your README.
+
+#### Example Badges:
 ```md
-## System Information
+![Retro Badge](https://img.shields.io/badge/Retro-Computing-blue?style=for-the-badge&logo=retroarch&logoColor=white)
+![Pixel Art](https://img.shields.io/badge/Pixel-Art-yellow?style=for-the-badge&logo=pixlr&logoColor=white)
