@@ -7,45 +7,107 @@
 ██████╔╝╚█████╔╝██████╔╝██║░░░██║░░░╚█████╔╝╚█████╔╝██║░░░░░
 ╚═════╝░░╚════╝░╚═════╝░╚═╝░░░╚═╝░░░░╚════╝░░╚════╝░╚═╝░░░░░
 
+USER@Retro-PC:~$ help
+
+USER@Retro-PC:~$ about
+
+USER@Retro-PC:~$ skills
+
+USER@Retro-PC:~$ projects
+
+USER@Retro-PC:~$ contact
+
+USER@Retro-PC:~$ exit
+
+
+4. **Save Your Changes**
+
+   4.1. **Commit Changes**: After pasting the content, scroll down and provide a commit message (e.g., "Add mini terminal design") and click on "Commit changes".
+
+### Explanation
+
+- **Headers and Text**: The `#` symbol creates headers, and the text sections are written in plain Markdown.
+- **Code Blocks**: The triple backticks (```) followed by `bash` start a code block that looks like a terminal command.
+- **Commands and Responses**: Simulate typing commands and getting responses to mimic a terminal session.
+
+### Creating a More Interactive Terminal with GitHub Pages
+
+If you want a truly interactive terminal experience, you can use GitHub Pages and some JavaScript. Here's a basic example:
+
+1. **Create a GitHub Pages Site**
+
+   1.1. Create a new repository named `<your-username>.github.io`.
+
+   1.2. Clone the repository locally and add an `index.html` file.
+
+2. **Create the HTML for the Terminal**
+
+   Create an `index.html` file with the following content:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/styles/style.css" />
-    <!--PWA requirements-->
-    <meta name="theme-color" content="#9480FF" />
-    <link
-      rel="apple-touch-icon"
-      href="https://cdn.glitch.me/efc5414a-882b-4708-af81-8461abbc1a82%2Ftouch-icon.png?v=1633521972305"
-    />
-
-    <!-- PWA setup - update public/sw.js if you add your own assets like a new .css file -->
-    <link rel="manifest" href="manifest.json" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Terminal</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: monospace;
+            padding: 20px;
+        }
+        #terminal {
+            border: 1px solid green;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <p id="output">USER@Retro-PC:~$</p>
+        <input type="text" id="input" autofocus>
+    </div>
     <script>
-      if (location.protocol == "http:") location.protocol = "https:";
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("sw.js")
-          .then((reg) => console.log("Service Worker registered", reg))
-          .catch((err) =>
-            console.error("Service Worker **not** registered", err)
-          );
-      } else {
-        console.warn("Service Worker not supported in this browser");
-      }
+        document.getElementById('input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const input = document.getElementById('input').value;
+                const output = document.getElementById('output');
+                const newOutput = document.createElement('p');
+                newOutput.textContent = `USER@Retro-PC:~$ ${input}`;
+                output.parentNode.insertBefore(newOutput, output.nextSibling);
+                document.getElementById('input').value = '';
+                handleCommand(input, newOutput);
+            }
+        });
+
+        function handleCommand(command, outputElement) {
+            const output = document.createElement('p');
+            switch (command) {
+                case 'help':
+                    output.textContent = 'Available commands:\n- about\n- skills\n- projects\n- contact\n- exit';
+                    break;
+                case 'about':
+                    output.textContent = '👨‍💻 Developer with a passion for vintage computing\n🕹️ Enthusiast of all things retro and pixelated\n💾 Creating modern solutions with old-school flair';
+                    break;
+                case 'skills':
+                    output.textContent = 'Languages: C, Python, JavaScript\nTools: VS Code, Git, Terminal\nHobbies: Retro Gaming, Pixel Art';
+                    break;
+                case 'projects':
+                    output.textContent = '1. Retro Emulator: A multi-console emulator built in C.\n2. Old School Website: A static website with a 90s look.\n3. Pixel Art Gallery: A collection of my pixel art works.';
+                    break;
+                case 'contact':
+                    output.innerHTML = '<a href="https://twitter.com/yourhandle">Twitter</a>\n<a href="https://linkedin.com/in/yourprofile">LinkedIn</a>';
+                    break;
+                case 'exit':
+                    output.textContent = 'Thank you for visiting the Retro Terminal! Have a great day!';
+                    break;
+                default:
+                    output.textContent = 'Command not found';
+            }
+            outputElement.parentNode.insertBefore(output, outputElement.nextSibling);
+        }
     </script>
-    <script type="module" src="scripts/render.js"></script>
-    <!-- templates/head.js will fill in here -->
-  </head>
-  <body>
-    <main>
-      <div class="wrapper">
-        <div id="content" class="content">
-          <!-- scripts/render.js determines what fills in here -->
-        </div>
-      </div>
-    </main>
-  </body>
+</body>
 </html>
