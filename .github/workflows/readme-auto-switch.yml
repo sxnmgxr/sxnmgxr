@@ -3,7 +3,7 @@ name: Auto Switch Profile README
 on:
   schedule:
     - cron: "0 6 * * *"   # Every day at 06:00 UTC
-  workflow_dispatch:
+  workflow_dispatch:       # Allow manual run
 
 jobs:
   switch-readme:
@@ -11,10 +11,14 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          ref: main          # 👈 Always checkout main branch
+          fetch-depth: 0
 
       - name: Detect weekday
         id: weekday
         run: echo "DAY=$(date +%u)" >> $GITHUB_ENV
+        # %u → 1=Mon ... 7=Sun
 
       - name: Copy correct README
         run: |
@@ -27,9 +31,5 @@ jobs:
           fi
 
       - name: Commit & Push changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions
-          author_email: actions@github.com
-          message: "Auto-switch README"
-          add: "README.md"
+        run: |
+          git config --global user.name "github-actions"
