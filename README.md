@@ -1,21 +1,18 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/sxnmgxr/sxnmgxr/main/assets/banner.png" alt="DevOps Banner" />
-</p>
-
 # 👋 Hi, I'm Sujan Magar  
 
 🚀 **Intern DevOps Engineer @ Nnine Solutions**  
 🌱 Learning Cloud · Containers · CI/CD · Automation  
-💡 Passionate about reliable systems & automation  
+💡 Passionate about building reliable systems & simplifying workflows  
 
 ---
 
 ## 🛠️ Tech & Tools  
-☁️ AWS · Azure · GCP  
-🐳 Docker · Kubernetes  
-⚡ GitHub Actions · Terraform · Bash  
-📊 Prometheus · Grafana  
-💻 Node.js · Go · PostgreSQL · MongoDB  
+- ☁️ Cloud: AWS · Azure · GCP  
+- 🐳 Containers: Docker · Kubernetes  
+- ⚡ Automation & CI/CD: GitHub Actions · Terraform · Bash  
+- 📊 Monitoring: Prometheus · Grafana  
+- 💻 Backend: Node.js · Go · PostgreSQL · MongoDB  
+- 🐧 OS: Linux (Ubuntu/Debian)  
 
 ---
 
@@ -27,11 +24,12 @@
 
 ---
 
-## 🐍 Contribution Snake  
-<p align="center">
-  <img src="https://github.com/sxnmgxr/sxnmgxr/blob/output/github-contribution-grid-snake.svg" alt="snake animation"/>
-</p>
+## 🌟 About Me  
+- 🔹 Currently growing as a **DevOps Engineer Intern**  
+- 🔹 Hands-on with **real-world cloud & container projects**  
+- 🔹 Enjoy automating repetitive tasks and learning new tools  
+- 🔹 Open to **collaboration, mentorship, and knowledge sharing**  
 
 ---
 
-⭐ _"Automating today to simplify tomorrow."_
+⭐ _"Automating today to simplify tomorrow."_  
