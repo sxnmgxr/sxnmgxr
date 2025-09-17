@@ -1,7 +1,7 @@
 # 👋 Hi, I'm Sujan Magar  
 
 🚀 **Intern DevOps Engineer @ Nnine Solutions**  
-🌱 Learning Cloud · Containers · CI/CD · Automation  
+🌱 Exploring Cloud · Containers · CI/CD · Automation  
 💡 Passionate about building reliable systems & simplifying workflows  
 
 ---
@@ -18,18 +18,18 @@
 
 ## 📊 GitHub Stats  
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sxnmgxr&show_icons=true&theme=tokyonight" height="160"/>
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=sxnmgxr&show_icons=true&theme=tokyonight" height="160"/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=sxnmgxr&theme=tokyonight" height="160"/>
 </p>
 
 ---
 
 ## 🌟 About Me  
-- 🔹 Currently growing as a **DevOps Engineer Intern**  
+- 🔹 Growing as a **DevOps Engineer Intern**  
 - 🔹 Hands-on with **real-world cloud & container projects**  
-- 🔹 Enjoy automating repetitive tasks and learning new tools  
-- 🔹 Open to **collaboration, mentorship, and knowledge sharing**  
+- 🔹 I enjoy **automation & problem-solving**  
+- 🔹 Open to **collaboration & learning**  
 
 ---
 
-⭐ _"Automating today to simplify tomorrow."_  
+⭐ _"Automating today to simplify tomorrow."_
