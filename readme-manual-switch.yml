@@ -1,0 +1,38 @@
+name: Manual Switch Profile README
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Choose which README version to use"
+        required: true
+        default: "stylish"
+        type: choice
+        options:
+          - stylish
+          - minimal
+
+jobs:
+  switch-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Copy chosen README
+        run: |
+          if [ "${{ github.event.inputs.version }}" = "stylish" ]; then
+            cp README_stylish.md README.md
+            echo "🌈 Switched to Stylish README"
+          else
+            cp README_minimal.md README.md
+            echo "📝 Switched to Minimal README"
+          fi
+
+      - name: Commit & Push changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions
+          author_email: actions@github.com
+          message: "Manual switch to ${{ github.event.inputs.version }} README"
+          add: "README.md"
