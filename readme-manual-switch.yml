@@ -4,13 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Choose which README version to use"
+        description: "Choose: stylish or minimal"
         required: true
         default: "stylish"
-        type: choice
-        options:
-          - stylish
-          - minimal
 
 jobs:
   switch-readme:
