@@ -1,0 +1,35 @@
+name: Auto Switch Profile README
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # Every day at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  switch-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Detect weekday
+        id: weekday
+        run: echo "DAY=$(date +%u)" >> $GITHUB_ENV
+
+      - name: Copy correct README
+        run: |
+          if [ "$DAY" -lt 6 ]; then
+            cp README_minimal.md README.md
+            echo "📝 Using Minimal README (Weekday)"
+          else
+            cp README_stylish.md README.md
+            echo "🌈 Using Stylish README (Weekend)"
+          fi
+
+      - name: Commit & Push changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions
+          author_email: actions@github.com
+          message: "Auto-switch README"
+          add: "README.md"
