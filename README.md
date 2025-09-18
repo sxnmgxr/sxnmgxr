@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="600" alt="terminal animation">
-</p>
-
 <h1 align="center">⚡ Sujan Magar</h1>
 <h3 align="center">Intern DevOps Engineer @ Nnine Solutions</h3>
 
@@ -10,6 +6,7 @@
   <a href="#-skills--tools">Skills</a> •
   <a href="#-projects">Projects</a> •
   <a href="#-github-stats">Stats</a> •
+  <a href="#-devops-pipeline">Pipeline</a> •
   <a href="#-contact-me">Contact</a>
 </p>
 
