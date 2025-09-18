@@ -33,9 +33,9 @@
 ---
 
 ## 🌍 Connect With Me  
-- 💼 [LinkedIn](https://linkedin.com/in/sxnmgxr)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/sxnmgxr/)  
 - 🐦 [Twitter](https://twitter.com/sxnmgxr)  
-- 📧 Email: **sujan@example.com**  
+- 📧 Email: **sujanmagar05825@gmail.com**  
 
 ---
 
